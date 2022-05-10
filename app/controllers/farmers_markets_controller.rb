@@ -1,4 +1,5 @@
 class FarmersMarketsController < ApplicationController
   def index
-  end 
+    @farmers_markets = FarmersMarket.all
+  end
 end
