@@ -1,2 +1,4 @@
 class FarmersMarketsController < ApplicationController
-end 
+  def index
+  end 
+end
