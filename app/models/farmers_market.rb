@@ -1,2 +1,3 @@
 class FarmersMarket < ApplicationRecord
-end 
+  has_many :stands
+end
