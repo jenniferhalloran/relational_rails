@@ -40,10 +40,10 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~> 4.0.1'
   gem 'capybara'
-  gem 'launchy' # save_and_open_page
+  # gem 'launchy' # save_and_open_page
   gem 'simplecov'
-  gem 'shoulda-matchers', '~> 3.1'
-  gem 'orderly'
+  # gem 'shoulda-matchers', '~> 3.1'
+  # gem 'orderly'
 end
 
 group :development do
