@@ -256,6 +256,7 @@
       "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/app/models/farmers_market.rb": {
         "lines": [
           1,
+          1,
           null
         ]
       },
@@ -270,10 +271,13 @@
         "lines": [
           1,
           1,
-          0,
+          1,
           null,
           null,
           1,
+          0,
+          null,
+          null,
           null,
           null
         ]
@@ -285,6 +289,6 @@
         ]
       }
     },
-    "timestamp": 1652223773
+    "timestamp": 1652292959
   }
 }

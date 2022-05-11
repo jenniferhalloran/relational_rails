@@ -4,7 +4,7 @@ class CreateFarmersMarkets < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :city
       t.boolean :open
-      t.integer :stands
+      t.integer :num_stands
 
       t.timestamps
     end
