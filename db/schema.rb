@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_231514) do
     t.string "name"
     t.string "city"
     t.boolean "open"
-    t.integer "stands"
+    t.integer "num_stands"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
