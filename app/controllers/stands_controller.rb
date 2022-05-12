@@ -3,4 +3,8 @@ class StandsController < ApplicationController
     @stands = Stand.all
   end
 
+  def show
+    @stand = Stand.find(params[:id])
+  end
+
 end

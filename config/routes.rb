@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   get '/farmers_markets', to: 'farmers_markets#index'
   get '/farmers_markets/:id', to: 'farmers_markets#show'
   get '/stands', to: 'stands#index'
+  get '/stands/:id', to: 'stands#show'
+  
 end
