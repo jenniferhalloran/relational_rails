@@ -5,4 +5,8 @@ class FarmersMarket < ApplicationRecord
   validates_presence_of :city
   validates_presence_of :num_stands
   validates_inclusion_of :open, :in => [true, false]
+
+  def self.ordered_by_creation
+    order(created_at: :desc)
+  end
 end
