@@ -1,0 +1,7 @@
+<h2> All Stands</h2>
+<% @stands.each do |stand| %>
+  <ol> <b> Name: </b> <%= stand.name %> </ol>
+  <ol> <b> Open? </b> <%= stand.open %> </ol>
+  <ol> <b> Review Rating (Out of 5): </b> <%= stand.review_rating %> </ol>
+  <br>
+<% end %>
