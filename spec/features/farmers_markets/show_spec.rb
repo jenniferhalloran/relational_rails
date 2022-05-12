@@ -15,7 +15,6 @@ RSpec.describe 'the farmers markets show page', type: :feature do
 # When I visit '/parents/:id'
 # Then I see the parent with that id including the parent's attributes:
 # - data from each column that is on the parent table
-
   it 'displays the specific farmers markets attributes' do
     visit "/farmers_markets/#{@farmers_market_1.id}"
 
@@ -30,8 +29,7 @@ RSpec.describe 'the farmers markets show page', type: :feature do
   # As a visitor
   # When I visit a parent's show page
   # I see a count of the number of children associated with this parent
-
-  it 'displays the number of children associated with this parent' do
+  it 'displays the number of stands associated with this farmers market' do
     visit "/farmers_markets/#{@farmers_market_1.id}"
 
     expect(page).to have_content(@farmers_market_1.count_of_stands)
