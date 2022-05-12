@@ -1,4 +1,4 @@
 <h2> Farmers' Markets</h2>
 <% @farmers_markets.each do |market| %>
-  <ol> <%= market.name %> </ol>
+  <ol> <%= market.name %> (<i>created at <%= market.formatted_created_at %></i>)</ol>
 <% end %>
