@@ -257,11 +257,167 @@
           null
         ]
       },
+      "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/spec/features/farmers_markets/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/spec/features/farmers_markets/stands/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/spec/features/stands/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/spec/features/stands/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/spec/models/farmers_market_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/app/models/farmers_market.rb": {
         "lines": [
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
           null
         ]
       },
@@ -272,11 +428,41 @@
           null
         ]
       },
+      "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/spec/models/stand_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null
+        ]
+      },
       "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/app/models/stand.rb": {
         "lines": [
           1,
           1,
           null,
+          null
+        ]
+      },
+      "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/app/controllers/farmers_markets_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
           null
         ]
       },
@@ -290,27 +476,21 @@
           null
         ]
       },
-      "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
       "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/app/controllers/stands_controller.rb": {
         "lines": [
           1,
           1,
-          0,
+          1,
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1652367062
+    "timestamp": 1652384228
   }
 }

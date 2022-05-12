@@ -18,7 +18,6 @@ RSpec.describe 'the stands show page', type: :feature do
 
   it 'displays the stands attributes' do
     visit "/stands/#{@stand_1.id}"
-    save_and_open_page
     expect(page).to have_content(@stand_1.name)
     expect(page).to have_content(@stand_1.open)
     expect(page).to have_content(@stand_1.review_rating)

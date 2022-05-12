@@ -20,9 +20,7 @@ RSpec.describe 'Farmers Markets stands index' do
 
   it 'links to each songs show page' do
     visit "/farmers_markets/#{@slo.id}/stands"
-    save_and_open_page
     click_on @bubbas.name
-
     expect(current_path).to eq("/stands/#{@bubbas.id}")
   end
 
