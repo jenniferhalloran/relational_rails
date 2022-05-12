@@ -9,4 +9,13 @@ class FarmersMarket < ApplicationRecord
   def self.ordered_by_creation
     order(created_at: :desc)
   end
+
+  def formatted_created_at
+    created_at.strftime('%m/%d/%Y %H:%M %p')
+  end
+
+  def count_of_stands
+    stands.count
+  end
+
 end
