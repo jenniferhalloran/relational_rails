@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-12T15:54:58-04:00">2022-05-12T15:54:58-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-12T16:45:57-04:00">2022-05-12T16:45:57-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.12
+         1.13
        </span>
     </span> hits/line
     )
@@ -99,7 +99,7 @@
             <td class="cell--number">5</td>
             <td class="cell--number">5</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.20</td>
             
           </tr>
         
@@ -139,7 +139,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#71fff536920e56dfac0020a7efe7ea81f8773722" class="src_link" title="app/models/farmers_market.rb">app/models/farmers_market.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">8</td>
             <td class="cell--number">6</td>
             <td class="cell--number">6</td>
             <td class="cell--number">0</td>
@@ -605,8 +605,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="4">
+            <span class="hits">2</span>
             
 
             
@@ -1015,18 +1015,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
+          <li class="covered" data-hits="1" data-linenumber="4">
             <span class="hits">1</span>
             
 
@@ -1037,7 +1026,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
+          <li class="covered" data-hits="1" data-linenumber="5">
             <span class="hits">1</span>
             
 
@@ -1048,7 +1037,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="6">
             <span class="hits">1</span>
             
 
@@ -1059,7 +1048,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
+          <li class="covered" data-hits="1" data-linenumber="7">
             <span class="hits">1</span>
             
 
@@ -1070,7 +1059,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
@@ -4342,7 +4331,7 @@
 
             
 
-            <code class="ruby">  it &#39;links to each songs show page&#39; do</code>
+            <code class="ruby">  it &#39;links to each farmers market stand&#39; do</code>
           </li>
         </div>
       
@@ -5249,7 +5238,7 @@
 
             
 
-            <code class="ruby">    it { should allow_value(true).for :open}</code>
+            <code class="ruby">    it { should validate_presence_of :num_stands }</code>
           </li>
         </div>
       
@@ -5260,7 +5249,7 @@
 
             
 
-            <code class="ruby">    it { should allow_value(false).for :open}</code>
+            <code class="ruby">    it { should allow_value(true).for :open}</code>
           </li>
         </div>
       
@@ -5271,7 +5260,7 @@
 
             
 
-            <code class="ruby">    it { should_not allow_value(nil).for :open}</code>
+            <code class="ruby">    it { should allow_value(false).for :open}</code>
           </li>
         </div>
       
@@ -5282,7 +5271,7 @@
 
             
 
-            <code class="ruby">    it { should validate_presence_of :num_stands }</code>
+            <code class="ruby">    it { should_not allow_value(nil).for :open}</code>
           </li>
         </div>
       

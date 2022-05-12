@@ -21,4 +21,18 @@ RSpec.describe 'the farmers markets index page', type: :feature do
     expect(page).to have_content(@farmers_market_4.name)
   end
 
+  # User Story 6, Parent Index sorted by Most Recently Created
+  # As a visitor
+  # When I visit the parent index,
+  # I see that records are ordered by most recently created first
+  # And next to each of the records I see when it was created
+
+  it 'shows all the farmers markets in order of created_at, most recent first' do
+  visit '/farmers_markets'
+
+  expect(@farmers_market_4.name).to appear_before(@farmers_market_3.name)
+  expect(@farmers_market_3.name).to appear_before(@farmers_market_2.name)
+  expect(@farmers_market_2.name).to appear_before(@farmers_market_1.name)
+  expect(@farmers_market_2.name).not_to appear_before(@farmers_market_4.name)
+end
 end

@@ -18,7 +18,7 @@ RSpec.describe 'Farmers Markets stands index' do
     expect(page).to have_content(@espresso_lane.name)
   end
 
-  it 'links to each songs show page' do
+  it 'links to each farmers market stand' do
     visit "/farmers_markets/#{@slo.id}/stands"
     click_on @bubbas.name
     expect(current_path).to eq("/stands/#{@bubbas.id}")
