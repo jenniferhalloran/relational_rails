@@ -1,5 +1,8 @@
+<%= link_to "All Stands", "/stands" %> | <%= link_to "All Farmers Markets", "/farmers_markets" %>
+
 <h2><%= @farmers_market.name %></h2>
 <ol> <b> City: </b> <%= @farmers_market.city %></ol>
 <ol> <b> Currently Open: </b> <%= @farmers_market.open %></ol>
 <ol> <b> Stand Capacity: </b> <%= @farmers_market.num_stands %></ol>
 <ol> <b> Number of Open Stands: </b> <%= @farmers_market.count_of_stands %></ol>
+<ol> <%= link_to "Current Stands", "/farmers_markets/#{@farmers_market.id}/stands" %>

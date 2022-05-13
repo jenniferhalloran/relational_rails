@@ -1,3 +1,5 @@
+<%= link_to "All Stands", "/stands" %> | <%= link_to "All Farmers Markets", "/farmers_markets" %>
+
 <h2> Farmers' Markets</h2>
 <% @farmers_markets.each do |market| %>
   <ol> <%= market.name %> (<i>created at <%= market.formatted_created_at %></i>)</ol>
