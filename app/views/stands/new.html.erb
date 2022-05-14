@@ -1,0 +1,14 @@
+<h2> Add a Stand to <%=@farmers_market.name =%> </h2>
+<%= form_with url:"/farmers_markets/#{@farmers_market.id}/stands", method: :post, local: true do |form| %>
+<%= form.label :name, "Stand Name:" %>
+<%= form.text_field :name %> <br> <br>
+
+
+<%= form.label :open, "Open?" %>
+<%= form.select :open, ["true","false"] %> <br> <br>
+
+<%= form.label :review_rating %>
+<%= form.number_field :review_rating, in: 0..5, step: 1 %> <br> <br>
+
+<%= form.submit "Create Stand" %>
+<% end %>

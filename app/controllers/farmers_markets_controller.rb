@@ -22,9 +22,9 @@ class FarmersMarketsController < ApplicationController
   end
 
   def update
-    @farmers_market = FarmersMarket.find(params[:id])
-    @farmers_market.update(farmers_market_params)
-    redirect_to "/farmers_markets/#{@farmers_market.id}"
+    farmers_market = FarmersMarket.find(params[:id])
+    farmers_market.update(farmers_market_params)
+    redirect_to "/farmers_markets/#{farmers_market.id}"
   end
 
 private
