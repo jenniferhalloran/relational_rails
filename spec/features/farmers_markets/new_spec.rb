@@ -28,7 +28,7 @@ RSpec.describe 'the Farmers Market creation' do
     fill_in('Num stands', with: 24)
     select "true", from: :open
     click_button('Create Farmers Market')
-
+    
     new_farmers_market_id = FarmersMarket.last.id #(this allows us to access the most recently created farmers market, which should be Pike Place and get the id in the next line.)
     expect(current_path).to eq("/farmers_markets")
     expect(page).to have_content("Pike Place Market")

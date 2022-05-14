@@ -12,8 +12,12 @@ class FarmersMarketsController < ApplicationController
   end
 
   def create
-    farmers_market = FarmersMarket.create(name: params[:name], city: params[:city], num_stands: params[:num_stands], open: params[:open])
+    farmers_market = FarmersMarket.create(farmers_market_params)
     redirect_to "/farmers_markets"
+  end
+
+  def farmers_market_params #strong parameters
+    params.permit(:name, :city, :num_stands, :open)
   end
 
 end
