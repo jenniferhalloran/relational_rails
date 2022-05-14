@@ -1,0 +1,16 @@
+<h2> Add a New Farmer's Market </h2>
+<%= form_with url:'/farmers_markets', method: :post, local: true do |form| %>
+<%= form.label :name, "Farmers Market Name:" %>
+<%= form.text_field :name %> <br> <br>
+
+<%= form.label :city, "City:" %>
+<%= form.text_field :city %> <br> <br>
+
+<%= form.label :num_stands %>
+<%= form.number_field :num_stands %> <br> <br>
+
+<%= form.label :open, "Open?" %>
+<%= form.select :open, ["true","false"] %> <br> <br>
+
+<%= form.submit "Create Farmers Market" %>
+<% end %>
