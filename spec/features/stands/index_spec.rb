@@ -26,9 +26,9 @@ RSpec.describe 'the stands index page', type: :feature do
     expect(page).to have_content(@stand_3.name)
     expect(page).to have_content(@stand_3.open)
     expect(page).to have_content(@stand_3.review_rating)
-    expect(page).to have_content(@stand_4.name)
-    expect(page).to have_content(@stand_4.open)
-    expect(page).to have_content(@stand_4.review_rating)
+    expect(page).to_not have_content(@stand_4.name)
+    expect(page).to_not have_content(@stand_4.open)
+    expect(page).to_not have_content(@stand_4.review_rating)
   end
 
 end

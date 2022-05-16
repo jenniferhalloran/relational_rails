@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-16T15:48:31-04:00">2022-05-16T15:48:31-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-16T15:59:12-04:00">2022-05-16T15:59:12-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -1082,7 +1082,7 @@
 
             
 
-            <code class="ruby">    @stands = Stand.all</code>
+            <code class="ruby">    @stands = Stand.where(open: true)</code>
           </li>
         </div>
       
@@ -7797,7 +7797,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(@stand_4.name)</code>
+            <code class="ruby">    expect(page).to_not have_content(@stand_4.name)</code>
           </li>
         </div>
       
@@ -7808,7 +7808,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(@stand_4.open)</code>
+            <code class="ruby">    expect(page).to_not have_content(@stand_4.open)</code>
           </li>
         </div>
       
@@ -7819,7 +7819,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content(@stand_4.review_rating)</code>
+            <code class="ruby">    expect(page).to_not have_content(@stand_4.review_rating)</code>
           </li>
         </div>
       

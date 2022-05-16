@@ -1,6 +1,6 @@
 class StandsController < ApplicationController
   def index
-    @stands = Stand.all
+    @stands = Stand.where(open: true)
   end
 
   def show
