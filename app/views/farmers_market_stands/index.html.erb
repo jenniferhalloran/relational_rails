@@ -1,5 +1,6 @@
-<%= link_to "All Stands", "/stands" %> | <%= link_to "All Farmers Markets", "/farmers_markets" %>
-
+<%= link_to "All Stands", "/stands" %> | <%= link_to "All Farmers Markets", "/farmers_markets" %><br><br>
 <% @stands.each do |stand| %>
 <ul>  <%= link_to stand.name, "/stands/#{stand.id}" %> </ul>
-<% end %>
+<% end %> <br>
+
+<%= link_to "Create Stand", "/farmers_markets/#{@farmers_market.id}/stands/new" %> </ol> <br><br>
