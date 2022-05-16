@@ -12,7 +12,7 @@ require 'rails_helper'
 # a new parent record is created,
 # and I am redirected to the Parent Index page where I see the new Parent displayed.
 
-RSpec.describe 'the Farmers Market creation' do
+RSpec.describe 'the Farmers Market creation', type: :feature do
   it 'links to the new page from the farmers markets index' do
     visit '/farmers_markets'
 
@@ -25,7 +25,7 @@ RSpec.describe 'the Farmers Market creation' do
 
     fill_in('Name', with: 'Pike Place Market')
     fill_in('City', with: 'Seattle')
-    fill_in('Num stands', with: 24)
+    fill_in('Number of Stands', with: 24)
     select "true", from: :open
     click_button('Create Farmers Market')
 

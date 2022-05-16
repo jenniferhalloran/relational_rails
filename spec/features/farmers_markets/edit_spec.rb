@@ -33,7 +33,7 @@ RSpec.describe 'the farmers market edit' do
 
     fill_in('Name', with: 'SLO Farmers Market')
     fill_in('City', with: 'San Luis Obispo')
-    fill_in('Num stands', with: 15)
+    fill_in('Number of Stands', with: 15)
     select "true", from: :open
     click_button('Update Farmers Market')
 

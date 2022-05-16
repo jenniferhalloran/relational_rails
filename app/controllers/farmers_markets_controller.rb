@@ -12,7 +12,7 @@ class FarmersMarketsController < ApplicationController
   end
 
   def create
-    farmers_market = FarmersMarket.create(farmers_market_params)
+    FarmersMarket.create(farmers_market_params)
     redirect_to "/farmers_markets"
   end
 

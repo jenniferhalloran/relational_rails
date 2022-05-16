@@ -1,0 +1,15 @@
+<h2> Edit <%=@stand.name%> </h2>
+
+<%= form_with url: "/stands/#{@stand.id}", method: :patch, local: true do |form| %>
+<%= form.label :name, "Stand Name:" %>
+<%= form.text_field :name %> <br> <br>
+
+
+<%= form.label :open, "Open?" %>
+<%= form.select :open, ["true","false"] %> <br> <br>
+
+<%= form.label :review_rating %>
+<%= form.number_field :review_rating, in: 0..5, step: 1 %> <br> <br>
+
+<%= form.submit "Update Stand" %>
+<% end %>

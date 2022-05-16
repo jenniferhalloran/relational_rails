@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get '/farmers_markets/:id/edit', to: 'farmers_markets#edit'
   patch '/farmers_markets/:id', to: 'farmers_markets#update'
   post '/farmers_markets/:id/stands', to: 'stands#create'
+  get '/stands/:id/edit', to: 'stands#edit'
+  patch '/stands/:id', to: 'stands#update'
 end

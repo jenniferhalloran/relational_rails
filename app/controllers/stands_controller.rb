@@ -17,6 +17,16 @@ class StandsController < ApplicationController
     redirect_to "/farmers_markets/#{@farmers_market.id}/stands"
   end
 
+  def edit
+    @stand = Stand.find(params[:id])
+  end
+
+  def update
+    stand = Stand.find(params[:id])
+    stand.update(stand_params)
+    redirect_to "/stands/#{stand.id}"
+  end
+
 private
   def stand_params
     params.permit(:name, :open, :review_rating)
