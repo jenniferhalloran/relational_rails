@@ -15,6 +15,11 @@ RSpec.describe 'the stands index page', type: :feature do
   # When I visit '/child_table_name'
   # Then I see each Child in the system including the Child's attributes:
 
+  # User Story 15, Child Index only shows `true` Records
+  # As a visitor
+  # When I visit the child index
+  # Then I only see records where the boolean column is `true`
+
   it 'displays the stands and each name, open status, and review rating ' do
     visit '/stands'
     expect(page).to have_content(@stand_1.name)
