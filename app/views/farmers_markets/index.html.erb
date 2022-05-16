@@ -2,7 +2,7 @@
 
 <h2> Farmers' Markets</h2>
 <% @farmers_markets.each do |market| %>
-  <ol> <%=link_to market.name, "/farmers_markets/#{market.id}" %> (<i>created at <%= market.formatted_created_at %></i>)</ol>
+  <ol> <%=link_to market.name, "/farmers_markets/#{market.id}" %> (<i>created at <%= market.formatted_created_at %></i>) <%= link_to "Edit", "/farmers_markets/#{market.id}/edit" %> | </ol>
 <% end %>
 
 <%= link_to 'New Farmers Market', "/farmers_markets/new" %>

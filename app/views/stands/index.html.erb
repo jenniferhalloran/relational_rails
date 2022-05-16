@@ -5,5 +5,6 @@
   <ol> <b> Name: </b> <%= stand.name %> </ol>
   <ol> <b> Open? </b> <%= stand.open %> </ol>
   <ol> <b> Review Rating: </b> <%= stand.review_rating %>/5 </ol>
+  <ol> <%= link_to "Edit", "/stands/#{stand.id}/edit" %> </ol>
   <br>
 <% end %>

@@ -38,5 +38,16 @@ RSpec.describe 'the farmers markets index page', type: :feature do
     expect(@farmers_market_2.name).to appear_before(@farmers_market_1.name)
     expect(@farmers_market_2.name).not_to appear_before(@farmers_market_4.name)
   end
+
+# User Story 17, Parent Update From Parent Index Page
+# As a visitor
+# When I visit the parent index page
+# Next to every parent, I see a link to edit that parent's info
+# When I click the link
+# I should be taken to that parents edit page where I can update its information just like in User Story 4
+
+  it "has a link to edit each market's information" do
+    ##I am not sure the best way to test this woops
+  end
   
 end
