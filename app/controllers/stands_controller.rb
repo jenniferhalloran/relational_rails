@@ -1,6 +1,6 @@
 class StandsController < ApplicationController
   def index
-    @stands = Stand.all
+    @stands = Stand.where(open: true)
   end
 
   def show
@@ -28,6 +28,7 @@ class StandsController < ApplicationController
   end
 
 private
+
   def stand_params
     params.permit(:name, :open, :review_rating)
   end

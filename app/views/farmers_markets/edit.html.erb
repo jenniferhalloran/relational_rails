@@ -1,3 +1,5 @@
+<%= link_to "All Stands", "/stands" %> | <%= link_to "All Farmers Markets", "/farmers_markets" %>
+
 <h2> Edit <%=@farmers_market.name%> </h2>
 
 <%= form_with url: "/farmers_markets/#{@farmers_market.id}", method: :patch, local: true do |form| %>
