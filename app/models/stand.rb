@@ -6,6 +6,10 @@ class Stand < ApplicationRecord
   validates_inclusion_of :open, :in => [true, false]
 
 
+  def self.open_stands
+    Stand.where(open: true)
+  end
+
   def self.rating_over(rating)
     where("review_rating > ?", rating)
   end
