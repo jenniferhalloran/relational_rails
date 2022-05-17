@@ -22,9 +22,14 @@ RSpec.describe Stand, type: :model do
       @truck = @hillcrest.stands.create!(name: "Tasty Truck", open: true, review_rating: 1)
       @bistro = @hillcrest.stands.create!(name: "Breakfast Bistro", open: false, review_rating: 4)
     end
-    
+
     it "lists the open stands" do
       expect(Stand.open_stands).to eq([@bubs, @espresso, @truck])
+    end
+
+    it "can alphabetize the stands" do
+      expect(Stand.alphabetize).to eq([@bistro, @bubs, @espresso, @truck])
+
     end
   end
 end
