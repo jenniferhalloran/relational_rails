@@ -10,6 +10,10 @@ class Stand < ApplicationRecord
     Stand.where(open: true)
   end
 
+  def self.alphabetize
+    order(:name)
+  end
+
   def self.rating_over(rating)
     Stand.where("review_rating > ?", rating)
   end
