@@ -2,9 +2,10 @@
 
 <h2> All Open Stands</h2>
 <% @stands.each do |stand| %>
+<div class ="stand-<%=stand.id%>"
   <ol> <b> Name: </b> <%= link_to "#{stand.name}", "/stands/#{stand.id}" %> </ol>
   <ol> <b> Open? </b> <%= stand.open %> </ol>
   <ol> <b> Review Rating: </b> <%= stand.review_rating %>/5 </ol>
   <ol> <%= link_to "Edit", "/stands/#{stand.id}/edit" %> | <%= link_to "Delete", "/stands/#{stand.id}", method: :delete %> </ol>
-  <br>
+</div>
 <% end %>
