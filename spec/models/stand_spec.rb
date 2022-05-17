@@ -29,7 +29,11 @@ RSpec.describe Stand, type: :model do
 
     it "can alphabetize the stands" do
       expect(Stand.alphabetize).to eq([@bistro, @bubs, @espresso, @truck])
+    end
 
+    it "can list stands with a review rating over a certain number" do
+      expect(Stand.rating_over(2)).to eq([@bubs, @espresso, @bistro])
+      expect(Stand.rating_over(4)).to eq([@espresso])
     end
   end
 end
