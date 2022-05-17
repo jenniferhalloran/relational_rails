@@ -47,7 +47,6 @@ RSpec.describe 'Farmers Markets stands index' do
 
     click_on "Alphabetize"
     expect(current_path).to eq("/farmers_markets/#{@slo.id}/stands/")
-    save_and_open_page
     expect(@bubbas.name).to appear_before(@espresso_lane.name)
     expect(@espresso_lane.name).to appear_before(@maples.name)
   end
