@@ -23,6 +23,9 @@ RSpec.describe 'the farmers markets show page', type: :feature do
     expect(page).to have_content(@farmers_market_1.open)
     expect(page).to have_content(@farmers_market_1.num_stands)
     expect(page).to_not have_content(@farmers_market_2.num_stands)
+    expect(page).to_not have_content(@farmers_market_2.name)
+    expect(page).to_not have_content(@farmers_market_3.name)
+    expect(page).to_not have_content(@farmers_market_4.name)
   end
 
   # User Story 7, Parent Child Count
@@ -33,9 +36,15 @@ RSpec.describe 'the farmers markets show page', type: :feature do
     visit "/farmers_markets/#{@farmers_market_1.id}"
 
     expect(page).to have_content(@farmers_market_1.count_of_stands)
-
   end
 
+  it "links to the stands associated with this farmers market" do
+    visit "/farmers_markets/#{@farmers_market_1.id}"
+    click_link 'Current Stands'
+
+    expect(current_path).to eq("/farmers_markets/#{@farmers_market_1.id}/stands")
+  end
+  
   #User Story 19, Parent Delete
   # As a visitor
   # When I visit a parent show page
@@ -48,12 +57,13 @@ RSpec.describe 'the farmers markets show page', type: :feature do
     it "links to delete the team" do
       visit "/farmers_markets/#{@farmers_market_1.id}"
       click_link "Delete #{@farmers_market_1.name}"
-      expect(current_path).to eq('/farmers_markets')
 
+      expect(current_path).to eq('/farmers_markets')
       expect(page).not_to have_content("SLO Farmers Market")
       expect(page).to have_content("Union Square Greenmarket")
 
       visit "/stands"
+
       expect(page).not_to have_content("Bubbas Burritos")
       expect(page).not_to have_content("Espresso Lane")
     end

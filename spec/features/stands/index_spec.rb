@@ -22,6 +22,7 @@ RSpec.describe 'the stands index page', type: :feature do
 
   it 'displays the stands and each name, open status, and review rating ' do
     visit '/stands'
+
     expect(page).to have_content(@stand_1.name)
     expect(page).to have_content(@stand_1.open)
     expect(page).to have_content(@stand_1.review_rating)
@@ -46,6 +47,7 @@ RSpec.describe 'the stands index page', type: :feature do
   it "has a link to edit each stall's information" do
     Stand.open_stands.each do |stand|
       visit '/stands'
+
       within ".stand-#{stand.id}" do
         expect(page).to have_link("Edit")
         click_link("Edit")
@@ -64,6 +66,7 @@ RSpec.describe 'the stands index page', type: :feature do
   it "has a link to delete each stall's information" do
     Stand.open_stands.each do |stand|
       visit '/stands'
+      
       within ".stand-#{stand.id}" do
         expect(page).to have_link("Delete")
         click_link("Delete")
