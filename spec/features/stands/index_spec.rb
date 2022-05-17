@@ -43,25 +43,32 @@ RSpec.describe 'the stands index page', type: :feature do
   # When I click the link
   # I should be taken to that `child_table_name` edit page where I can update its information just like in User Story 11
 
-    it "has a link to edit each stall's information" do
-      Stand.open_stands.each do |stand|
-        visit '/stands'
-        within ".stand-#{stand.id}" do
-          expect(page).to have_link("Edit")
-          click_link("Edit")
-          expect(current_path).to eq("/stands/#{stand.id}/edit")
-        end
+  it "has a link to edit each stall's information" do
+    Stand.open_stands.each do |stand|
+      visit '/stands'
+      within ".stand-#{stand.id}" do
+        expect(page).to have_link("Edit")
+        click_link("Edit")
+        expect(current_path).to eq("/stands/#{stand.id}/edit")
       end
     end
+  end
 
 
-    # User Story 23, Child Delete From Childs Index Page
-    # As a visitor
-    # When I visit the `child_table_name` index page or a parent `child_table_name` index page
-    # Next to every child, I see a link to delete that child
-    # When I click the link
-    # I should be taken to the `child_table_name` index page where I no longer see that child
-    it "has a link to delete each stall's information" do
-
+  # User Story 23, Child Delete From Childs Index Page
+  # As a visitor
+  # When I visit the `child_table_name` index page or a parent `child_table_name` index page
+  # Next to every child, I see a link to delete that child
+  # When I click the link
+  # I should be taken to the `child_table_name` index page where I no longer see that child
+  it "has a link to delete each stall's information" do
+    Stand.open_stands.each do |stand|
+      visit '/stands'
+      within ".stand-#{stand.id}" do
+        expect(page).to have_link("Delete")
+        click_link("Delete")
+        expect(current_path).to eq("/stands")
+      end
     end
+  end
 end
