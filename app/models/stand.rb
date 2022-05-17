@@ -11,7 +11,7 @@ class Stand < ApplicationRecord
   end
 
   def self.rating_over(rating)
-    where("review_rating > ?", rating)
+    Stand.where("review_rating > ?", rating)
   end
 
 end

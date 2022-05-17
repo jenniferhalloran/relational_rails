@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-17T10:53:58-04:00">2022-05-17T10:53:58-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-05-17T13:38:09-04:00">2022-05-17T13:38:09-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.05
+         2.12
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>389</b> relevant lines,
-    <span class="green"><b>389</b> lines covered</span> and
+    <b>398</b> relevant lines,
+    <span class="green"><b>398</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -110,7 +110,7 @@
             <td class="cell--number">24</td>
             <td class="cell--number">24</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.00</td>
+            <td class="cell--number">2.25</td>
             
           </tr>
         
@@ -150,11 +150,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#23204846edbb6f11be9366497be1fceced64063a" class="src_link" title="app/models/stand.rb">app/models/stand.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">7</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.14</td>
+            <td class="cell--number">2.89</td>
             
           </tr>
         
@@ -381,11 +381,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#8d78a227586ddee60ab69b1d6c931c38caa13ff7" class="src_link" title="spec/features/stands/index_spec.rb">spec/features/stands/index_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">60</td>
-            <td class="cell--number">25</td>
-            <td class="cell--number">25</td>
+            <td class="cell--number">68</td>
+            <td class="cell--number">32</td>
+            <td class="cell--number">32</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.48</td>
+            <td class="cell--number">1.75</td>
             
           </tr>
         
@@ -1219,13 +1219,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="13" data-linenumber="3">
-            <span class="hits">13</span>
+          <li class="covered" data-hits="16" data-linenumber="3">
+            <span class="hits">16</span>
             
 
             
 
-            <code class="ruby">    @stands = Stand.where(open: true)</code>
+            <code class="ruby">    @stands = Stand.open_stands</code>
           </li>
         </div>
       
@@ -1417,8 +1417,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="21">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="5" data-linenumber="21">
+            <span class="hits">5</span>
             
 
             
@@ -2056,8 +2056,8 @@
     
 
     <div class="t-line-summary">
-      <b>7</b> relevant lines.
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2163,18 +2163,18 @@
 
             
 
-            <code class="ruby">  def self.rating_over(rating)</code>
+            <code class="ruby">  def self.open_stands</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="10">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="17" data-linenumber="10">
+            <span class="hits">17</span>
             
 
             
 
-            <code class="ruby">    where(&quot;review_rating &gt; ?&quot;, rating)</code>
+            <code class="ruby">    Stand.where(open: true)</code>
           </li>
         </div>
       
@@ -2201,7 +2201,51 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.rating_over(rating)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="14">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    Stand.where(&quot;review_rating &gt; ?&quot;, rating)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -9153,8 +9197,8 @@
     
 
     <div class="t-line-summary">
-      <b>25</b> relevant lines.
-      <span class="green"><b>25</b> lines covered</span> and
+      <b>32</b> relevant lines.
+      <span class="green"><b>32</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -9672,79 +9716,79 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="47">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">      Stand.open_stands.each do |stand|</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="48">
+            <span class="hits">3</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">        visit &#39;/stands&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="49">
+            <span class="hits">3</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">        save_and_open_page</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="50">
+            <span class="hits">3</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">        within &quot;.stand-#{stand.id}&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="51">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="51">
+            <span class="hits">3</span>
             
 
-            <code class="ruby">    # User Story 23, Child Delete From Childs Index Page</code>
+            
+
+            <code class="ruby">          expect(page).to have_link(&quot;Edit&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="52">
+            <span class="hits">3</span>
             
 
-            <code class="ruby">    # As a visitor</code>
+            
+
+            <code class="ruby">          click_link(&quot;Edit&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="53">
+            <span class="hits">3</span>
             
 
-            <code class="ruby">    # When I visit the `child_table_name` index page or a parent `child_table_name` index page</code>
+            
+
+            <code class="ruby">          expect(current_path).to eq(&quot;/stands/#{stand.id}/edit&quot;)</code>
           </li>
         </div>
       
@@ -9755,7 +9799,7 @@
 
             
 
-            <code class="ruby">    # Next to every child, I see a link to delete that child</code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
@@ -9766,7 +9810,7 @@
 
             
 
-            <code class="ruby">    # When I click the link</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -9777,18 +9821,18 @@
 
             
 
-            <code class="ruby">    # I should be taken to the `child_table_name` index page where I no longer see that child</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="57">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="57">
+            
             
 
             
 
-            <code class="ruby">    it &quot;has a link to delete each stall&#39;s information&quot; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9810,12 +9854,100 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">    # User Story 23, Child Delete From Childs Index Page</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="60">
+            
+            
+
+            
+
+            <code class="ruby">    # As a visitor</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="61">
+            
+            
+
+            
+
+            <code class="ruby">    # When I visit the `child_table_name` index page or a parent `child_table_name` index page</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="62">
+            
+            
+
+            
+
+            <code class="ruby">    # Next to every child, I see a link to delete that child</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="63">
+            
+            
+
+            
+
+            <code class="ruby">    # When I click the link</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="64">
+            
+            
+
+            
+
+            <code class="ruby">    # I should be taken to the `child_table_name` index page where I no longer see that child</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="65">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &quot;has a link to delete each stall&#39;s information&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="68">
             
             
 
