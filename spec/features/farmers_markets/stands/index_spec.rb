@@ -58,8 +58,15 @@ RSpec.describe 'Farmers Markets stands index' do
 # When I click the link
 # I should be taken to that `child_table_name` edit page where I can update its information just like in User Story 11
 
-  it "has a link to edit each stall's information" do
-
+it "has a link to edit each stall's information" do
+    Stand.open_stands.each do |stand|
+      visit '/stands'
+      within ".stand-#{stand.id}" do
+        expect(page).to have_link("Edit")
+        click_link("Edit")
+        expect(current_path).to eq("/stands/#{stand.id}/edit")
+      end
+    end
   end
 
   # User Story 21, Display Records Over a Given Threshold
