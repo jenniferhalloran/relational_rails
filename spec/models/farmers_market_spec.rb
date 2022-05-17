@@ -39,5 +39,9 @@ RSpec.describe FarmersMarket, type: :model do
       expect(@slo.formatted_created_at).to eq(date.strftime('%m/%d/%Y %H:%M %p'))
     end
 
+    it "returns the count of stands for a farmers market" do
+      expect(@slo.count_of_stands). to eq(2)
+      expect(@hillcrest.count_of_stands). to eq(0)
+    end
   end
 end
