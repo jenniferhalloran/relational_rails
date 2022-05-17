@@ -6,5 +6,12 @@
 <ul> <b> Review Rating: </b> <%= stand.review_rating %>/5 </ul>
 <ul> <%= link_to "Edit", "/stands/#{stand.id}/edit" %> </ul><br>
 <% end %> <br>
+
+<%= form_with url: "/farmers_markets/#{@farmers_market.id}/stands", method: :get, local: true do |form| %>
+<%= form.label :rating_over, "Find stands with rating over:" %>
+<%= form.number_field :rating_over, in: 0..5 %>
+<%= form.submit "Search" %>
+<% end %> <br>
+
 <%= link_to "Alphabetize", "/farmers_markets/#{@farmers_market.id}/stands/?sort=name" %> |
-<%= link_to "Create Stand", "/farmers_markets/#{@farmers_market.id}/stands/new" %> </ol> <br><br>
+<%= link_to "Create Stand", "/farmers_markets/#{@farmers_market.id}/stands/new" %> <br><br>
