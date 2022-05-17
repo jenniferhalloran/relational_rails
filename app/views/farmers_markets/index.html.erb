@@ -1,0 +1,11 @@
+<%= link_to "All Stands", "/stands" %> | <%= link_to "All Farmers Markets", "/farmers_markets" %>
+
+<h2> Farmers' Markets</h2>
+<% @farmers_markets.each do |market| %>
+<div class="farmers_market-<%=market.id%>">
+  <ol> <%=link_to market.name, "/farmers_markets/#{market.id}" %> (<i>created at <%= market.formatted_created_at %></i>)
+    <%= link_to "Edit", "/farmers_markets/#{market.id}/edit" %> | <%= link_to "Delete", "/farmers_markets/#{market.id}", method: :delete %> </ol>
+</div>
+<% end %>
+
+<%= link_to 'New Farmers Market', "/farmers_markets/new" %>
