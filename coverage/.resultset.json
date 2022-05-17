@@ -666,7 +666,32 @@
       },
       "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/spec/features/stands/destroy_spec.rb": {
         "lines": [
-
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
         ]
       },
       "/Users/jenniferhalloran/turing/2mod/projects/relational_rails/spec/features/stands/edit_spec.rb": {
@@ -1028,7 +1053,7 @@
           null,
           null,
           1,
-          29,
+          30,
           null,
           null,
           1,
@@ -1098,11 +1123,11 @@
         "lines": [
           1,
           1,
-          25,
+          26,
           null,
           null,
           1,
-          10,
+          11,
           null,
           null,
           1,
@@ -1126,9 +1151,9 @@
           null,
           null,
           1,
-          4,
-          4,
-          4,
+          5,
+          5,
+          5,
           null,
           null,
           1,
@@ -1158,6 +1183,6 @@
         ]
       }
     },
-    "timestamp": 1652816074
+    "timestamp": 1652816222
   }
 }
