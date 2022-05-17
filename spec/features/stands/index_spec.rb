@@ -47,4 +47,14 @@ RSpec.describe 'the stands index page', type: :feature do
 
     end
 
+
+    # User Story 23, Child Delete From Childs Index Page
+    # As a visitor
+    # When I visit the `child_table_name` index page or a parent `child_table_name` index page
+    # Next to every child, I see a link to delete that child
+    # When I click the link
+    # I should be taken to the `child_table_name` index page where I no longer see that child
+    it "has a link to delete each stall's information" do
+
+    end
 end
