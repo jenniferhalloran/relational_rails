@@ -26,4 +26,18 @@ RSpec.describe FarmersMarket, type: :model do
     end
   end
 
+  describe 'instance methods' do
+    before (:each) do
+      @slo =FarmersMarket.create!(name: "SLO Farmers Market", city: "San Luis Obispo", open: true, num_stands: 15)
+      @hillcrest = FarmersMarket.create!(name: "Hillcrest Farmers Market", city: "San Diego", open: true, num_stands: 46)
+      @bubbas = @slo.stands.create!(name: "Bubbas Burritos", open: true, review_rating: 4)
+      @espresso = @slo.stands.create!(name: "Espresso Lane", open: true, review_rating: 5)
+    end
+
+    it "returns a formatted created at date" do
+      date = Time.now.utc
+      expect(@slo.formatted_created_at).to eq(date.strftime('%m/%d/%Y %H:%M %p'))
+    end
+
+  end
 end
