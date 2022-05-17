@@ -5,3 +5,4 @@
 <ol> <b> Review Rating: </b> <%= @stand.review_rating %></ol>
 
 <%= link_to "Update #{@stand.name}", "/stands/#{@stand.id}/edit", method: :get %>
+<%= link_to "Delete #{@stand.name}", "/stands/#{@stand.id}", method: :delete %>

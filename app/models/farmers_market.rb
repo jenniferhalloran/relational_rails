@@ -1,5 +1,5 @@
 class FarmersMarket < ApplicationRecord
-  has_many :stands
+  has_many :stands, dependent: :delete_all
   #this creates a method that allows us to call (.stands)
   validates_presence_of :name
   validates_presence_of :city

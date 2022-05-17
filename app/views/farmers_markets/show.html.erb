@@ -7,3 +7,4 @@
 <ol> <b> Number of Open Stands: </b> <%= @farmers_market.count_of_stands %>,
 <%= link_to "Current Stands", "/farmers_markets/#{@farmers_market.id}/stands" %> </ol> <br><br>
 <%= link_to "Update #{@farmers_market.name}", "/farmers_markets/#{@farmers_market.id}/edit", method: :get %>
+<%= link_to "Delete #{@farmers_market.name}", "/farmers_markets/#{@farmers_market.id}", method: :delete %>

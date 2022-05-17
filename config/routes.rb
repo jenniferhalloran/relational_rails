@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   post '/farmers_markets/:id/stands', to: 'stands#create'
   get '/stands/:id/edit', to: 'stands#edit'
   patch '/stands/:id', to: 'stands#update'
+  delete "/farmers_markets/:id", to: 'farmers_markets#destroy'
+  delete "/stands/:id", to: 'stands#destroy'
 end

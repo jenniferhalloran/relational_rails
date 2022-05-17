@@ -47,7 +47,6 @@ RSpec.describe 'Farmers Markets stands index' do
 
     click_on "Alphabetize"
     expect(current_path).to eq("/farmers_markets/#{@slo.id}/stands/")
-    save_and_open_page
     expect(@bubbas.name).to appear_before(@espresso_lane.name)
     expect(@espresso_lane.name).to appear_before(@maples.name)
   end
@@ -62,5 +61,31 @@ RSpec.describe 'Farmers Markets stands index' do
   it "has a link to edit each stall's information" do
 
   end
+
+  # User Story 21, Display Records Over a Given Threshold
+  # As a visitor
+  # When I visit the Parent's children Index Page
+  # I see a form that allows me to input a number value
+  # When I input a number value and click the submit button that reads 'Only return records with more than `number` of `column_name`'
+  # Then I am brought back to the current index page with only the records that meet that threshold shown.
+  it "can return stalls with a rating over a certain threshold" do
+    visit "/farmers_markets/#{@slo.id}/stands"
+    fill_in "Find stands with rating over:", with: "3"
+    click_on "Search"
+    expect(current_path).to eq("/farmers_markets/#{@slo.id}/stands")
+    expect(page).to have_content(@espresso_lane.name)
+    expect(page).to have_content(@bubbas.name)
+    expect(page).to_not have_content(@maples.name)
+
+    visit "/farmers_markets/#{@slo.id}/stands"
+    fill_in "Find stands with rating over:", with: "4"
+    click_on "Search"
+    expect(current_path).to eq("/farmers_markets/#{@slo.id}/stands")
+    expect(page).to have_content(@espresso_lane.name)
+    expect(page).to_not have_content(@bubbas.name)
+    expect(page).to_not have_content(@maples.name)
+  end
+
+
 
 end

@@ -27,6 +27,12 @@ class StandsController < ApplicationController
     redirect_to "/stands/#{stand.id}"
   end
 
+  def destroy
+    stand = Stand.find(params[:id])
+    stand.destroy
+    redirect_to('/stands')
+  end
+
 private
 
   def stand_params
