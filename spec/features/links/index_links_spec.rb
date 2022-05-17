@@ -20,7 +20,9 @@ RSpec.describe 'links to indexes on every page' do
       visit view
 
       expect(page).to have_link('All Stands')
+
       click_link('All Stands')
+
       expect(current_path).to eq('/stands')
     end
   end
@@ -49,6 +51,9 @@ RSpec.describe 'links to indexes on every page' do
     click_link("Current Stands")
     expect(current_path).to eq("/farmers_markets/#{@farmers_market_1.id}/stands")
 
+    visit "/farmers_markets/#{@farmers_market_2.id}"
+    expect(page).to have_link("Current Stands")
+    click_link("Current Stands")
+    expect(current_path).to eq("/farmers_markets/#{@farmers_market_2.id}/stands")
   end
-
 end
