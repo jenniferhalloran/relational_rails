@@ -47,10 +47,16 @@ RSpec.describe 'the farmers markets index page', type: :feature do
 # I should be taken to that parents edit page where I can update its information just like in User Story 4
 
   it "has a link to edit each market's information" do
-    ##I am not sure the best way to test this woops
+    FarmersMarket.all.each do |farmers_market|
+      visit '/farmers_markets'
+      within ".farmers_market-#{farmers_market.id}" do
+        expect(page).to have_link("Edit")
+        click_link("Edit")
+        expect(current_path).to eq("/farmers_markets/#{farmers_market.id}/edit")
+      end
+    end
   end
 
-  [ ] done
 
 # User Story 22, Parent Delete From Parent Index Page
 # As a visitor
@@ -59,9 +65,7 @@ RSpec.describe 'the farmers markets index page', type: :feature do
 # When I click the link
 # I am returned to the Parent Index Page where I no longer see that parent
 
-  it "has a link to delete each market's information" do
 
-  end
 
 
 end
