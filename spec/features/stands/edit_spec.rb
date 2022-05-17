@@ -24,24 +24,31 @@ RSpec.describe 'the stand edit page' do
 
   it "links to the stand edit page" do
     visit "/stands/#{@stand_1.id}"
-
     click_link "Update #{@stand_1.name}"
+
     expect(current_path).to eq("/stands/#{@stand_1.id}/edit")
   end
 
   it "can edit the farmers market" do
     visit "/stands/#{@stand_1.id}"
+
     expect(page).to have_content("true")
+    expect(page).to_not have_content("false")
+    expect(page).to have_content("Bubbas Burritos")
+    expect(page).to have_content(4)
 
     visit "/stands/#{@stand_1.id}/edit"
 
-    fill_in('Name', with: 'Bubas Burritos')
+    fill_in('Name', with: 'Bubbas Burritos')
     fill_in('Review rating', with: 4)
     select "false", from: :open
     click_button('Update Stand')
 
     expect(current_path).to eq("/stands/#{@stand_1.id}")
     expect(page).to have_content("false")
+    expect(page).to_not have_content("true")
+    expect(page).to have_content("Bubbas Burritos")
+    expect(page).to have_content(4)
 
   end
 end

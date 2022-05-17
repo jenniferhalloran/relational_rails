@@ -13,8 +13,8 @@ RSpec.describe 'destroy a stall' do
 	it 'deletes the stall from the index page' do
 
    		visit "/stands/#{@stand_1.id}"
-
    		click_link "Delete #{@stand_1.name}"
+      
    		expect(current_path).to eq('/stands')
    		expect(page).to_not have_content(@stand_1.name)
    		expect(page).to have_content(@stand_2.name)
