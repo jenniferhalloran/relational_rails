@@ -27,7 +27,11 @@ RSpec.describe 'the farmers market edit' do
 
   it "can edit the farmers market" do
     visit "/farmers_markets/#{@farmers_market_1.id}"
+    expect(page).to have_content("SLO Farmers Market")
+    expect(page).to have_content("San Luis Obispo")
+    expect(page).to have_content(15)
     expect(page).to have_content("false")
+    expect(page).to_not have_content("true")
 
     visit "/farmers_markets/#{@farmers_market_1.id}/edit"
 
@@ -38,7 +42,11 @@ RSpec.describe 'the farmers market edit' do
     click_button('Update Farmers Market')
 
     expect(current_path).to eq("/farmers_markets/#{@farmers_market_1.id}")
+    expect(page).to have_content("SLO Farmers Market")
+    expect(page).to have_content("San Luis Obispo")
+    expect(page).to have_content(15)
     expect(page).to have_content("true")
+    expect(page).to_not have_content("false")
 
   end
 end

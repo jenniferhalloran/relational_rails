@@ -15,8 +15,8 @@ require 'rails_helper'
 RSpec.describe 'the Farmers Market creation', type: :feature do
   it 'links to the new page from the farmers markets index' do
     visit '/farmers_markets'
-
     click_link('New Farmers Market')
+
     expect(current_path).to eq('/farmers_markets/new')
   end
 
@@ -32,5 +32,4 @@ RSpec.describe 'the Farmers Market creation', type: :feature do
     expect(current_path).to eq("/farmers_markets")
     expect(page).to have_content("Pike Place Market")
   end
-
 end

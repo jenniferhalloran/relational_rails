@@ -15,6 +15,7 @@ RSpec.describe 'the farmers markets index page', type: :feature do
   # Then I see the name of each parent record in the system
   it 'displays the farmers market names and created at information' do
     visit '/farmers_markets'
+
     expect(page).to have_content(@farmers_market_1.name)
     expect(page).to have_content(@farmers_market_1.formatted_created_at)
     expect(page).to have_content(@farmers_market_2.name)
@@ -33,6 +34,7 @@ RSpec.describe 'the farmers markets index page', type: :feature do
 
   it 'shows all the farmers markets in order of created_at, most recent first' do
     visit '/farmers_markets'
+
     expect(@farmers_market_4.name).to appear_before(@farmers_market_3.name)
     expect(@farmers_market_3.name).to appear_before(@farmers_market_2.name)
     expect(@farmers_market_2.name).to appear_before(@farmers_market_1.name)
@@ -49,6 +51,7 @@ RSpec.describe 'the farmers markets index page', type: :feature do
   it "has a link to edit each market's information" do
     FarmersMarket.all.each do |farmers_market|
       visit '/farmers_markets'
+
       within ".farmers_market-#{farmers_market.id}" do
         expect(page).to have_link("Edit")
         click_link("Edit")
@@ -68,6 +71,7 @@ RSpec.describe 'the farmers markets index page', type: :feature do
   it "has a link to delete each market's information" do
     FarmersMarket.all.each do |farmers_market|
       visit '/farmers_markets'
+
       within ".farmers_market-#{farmers_market.id}" do
         expect(page).to have_link("Delete")
         click_link("Delete")
@@ -75,6 +79,4 @@ RSpec.describe 'the farmers markets index page', type: :feature do
       end
     end
   end
-
-
 end
