@@ -38,9 +38,7 @@ class FarmersMarketsController < ApplicationController
   end
 
 private
-
   def farmers_market_params #strong parameters
     params.permit(:name, :city, :num_stands, :open)
   end
-
 end

@@ -8,16 +8,15 @@ RSpec.describe 'destroy a farmers market' do
     @farmers_market_4 = FarmersMarket.create!(name: "Union Square Greenmarket", city: "New York", open: true, num_stands: 80)
   end
 
+
 	it 'deletes the farmers market from the index page' do
-   		visit "/farmers_markets/#{@farmers_market_1.id}"
-   		click_link "Delete #{@farmers_market_1.name}"
+ 		visit "/farmers_markets/#{@farmers_market_1.id}"
+ 		click_link "Delete #{@farmers_market_1.name}"
 
-   		expect(current_path).to eq('/farmers_markets')
-   		expect(page).to_not have_content(@farmers_market_1.name)
-   		expect(page).to have_content(@farmers_market_2.name)
-   		expect(page).to have_content(@farmers_market_3.name)
-   		expect(page).to have_content(@farmers_market_4.name)
-
+ 		expect(current_path).to eq('/farmers_markets')
+ 		expect(page).to_not have_content(@farmers_market_1.name)
+ 		expect(page).to have_content(@farmers_market_2.name)
+ 		expect(page).to have_content(@farmers_market_3.name)
+ 		expect(page).to have_content(@farmers_market_4.name)
 	end
-
 end

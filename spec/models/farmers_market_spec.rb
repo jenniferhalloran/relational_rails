@@ -27,9 +27,11 @@ RSpec.describe FarmersMarket, type: :model do
       @chicky = @ferry_plaza.stands.create!(name: "Chicky Chimichanga ", open: true, review_rating: 3)
     end
 
+
     it "orders by creation time" do
       expect(FarmersMarket.ordered_by_creation).to eq([@ferry_plaza, @greenmarket, @slo, @hillcrest])
     end
+
 
     it "can order by number of stands" do
       expect(FarmersMarket.order_by_active_stands).to eq([@hillcrest, @slo, @ferry_plaza, @greenmarket])
@@ -44,10 +46,12 @@ RSpec.describe FarmersMarket, type: :model do
       @espresso = @slo.stands.create!(name: "Espresso Lane", open: true, review_rating: 5)
     end
 
+
     it "returns a formatted created at date" do
       date = Time.now.utc
       expect(@slo.formatted_created_at).to eq(date.strftime('%m/%d/%Y %H:%M %p'))
     end
+
 
     it "returns the count of stands for a farmers market" do
       expect(@slo.count_of_stands). to eq(2)
