@@ -10,17 +10,15 @@ RSpec.describe 'destroy a stall' do
     @stand_4 = Stand.create!(name: "Mystic Pizza", open: true, review_rating: 3, farmers_market_id: @farmers_market_2.id)
   end
 
+
 	it 'deletes the stall from the index page' do
+ 		visit "/stands/#{@stand_1.id}"
+ 		click_link "Delete #{@stand_1.name}"
 
-   		visit "/stands/#{@stand_1.id}"
-   		click_link "Delete #{@stand_1.name}"
-      
-   		expect(current_path).to eq('/stands')
-   		expect(page).to_not have_content(@stand_1.name)
-   		expect(page).to have_content(@stand_2.name)
-   		expect(page).to have_content(@stand_3.name)
-   		expect(page).to have_content(@stand_4.name)
-
+ 		expect(current_path).to eq('/stands')
+ 		expect(page).to_not have_content(@stand_1.name)
+ 		expect(page).to have_content(@stand_2.name)
+ 		expect(page).to have_content(@stand_3.name)
+ 		expect(page).to have_content(@stand_4.name)
 	end
-
 end

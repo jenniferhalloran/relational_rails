@@ -22,13 +22,16 @@ RSpec.describe Stand, type: :model do
       @bistro = @hillcrest.stands.create!(name: "Breakfast Bistro", open: false, review_rating: 4)
     end
 
+
     it "lists the open stands" do
       expect(Stand.open_stands).to eq([@bubs, @espresso, @truck])
     end
 
+
     it "can alphabetize the stands" do
       expect(Stand.alphabetize).to eq([@bistro, @bubs, @espresso, @truck])
     end
+
 
     it "can list stands with a review rating over a certain number" do
       expect(Stand.rating_over(2)).to eq([@bubs, @espresso, @bistro])

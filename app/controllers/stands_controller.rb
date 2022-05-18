@@ -34,9 +34,7 @@ class StandsController < ApplicationController
   end
 
 private
-
   def stand_params
     params.permit(:name, :open, :review_rating)
   end
-
 end
