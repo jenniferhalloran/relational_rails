@@ -15,14 +15,24 @@ RSpec.describe FarmersMarket, type: :model do
 
   describe 'class methods' do
     before (:each) do
-      @slo =FarmersMarket.create!(name: "SLO Farmers Market", city: "San Luis Obispo", open: true, num_stands: 15)
       @hillcrest = FarmersMarket.create!(name: "Hillcrest Farmers Market", city: "San Diego", open: true, num_stands: 46)
-      @ferry_plaza = FarmersMarket.create!(name: "Ferry Plaza Farmers Market", city: "San Francisco", open: false , num_stands: 25)
+      @slo =FarmersMarket.create!(name: "SLO Farmers Market", city: "San Luis Obispo", open: true, num_stands: 15)
       @greenmarket = FarmersMarket.create!(name: "Union Square Greenmarket", city: "New York", open: true , num_stands: 87)
+      @ferry_plaza = FarmersMarket.create!(name: "Ferry Plaza Farmers Market", city: "San Francisco", open: false , num_stands: 25)
+      @espresso = @slo.stands.create!(name: "Espresso Lane", open: true, review_rating: 5)
+      @callahan = @slo.stands.create!(name: "Callahan Ceramics", open: true, review_rating: 4 )
+      @griddle = @hillcrest.stands.create!(name: "The Mad Griddle", open: true, review_rating: 4)
+      @truck = @hillcrest.stands.create!(name: "Tasty Truck", open: true, review_rating: 1)
+      @bistro = @hillcrest.stands.create!(name: "Breakfast Bistro", open: false, review_rating: 4)
+      @chicky = @ferry_plaza.stands.create!(name: "Chicky Chimichanga ", open: true, review_rating: 3)
     end
 
     it "orders by creation time" do
-      expect(FarmersMarket.ordered_by_creation).to eq([@greenmarket, @ferry_plaza, @hillcrest, @slo])
+      expect(FarmersMarket.ordered_by_creation).to eq([@ferry_plaza, @greenmarket, @slo, @hillcrest])
+    end
+
+    it "can order by number of stands" do
+      expect(FarmersMarket.order_by_active_stands).to eq([@hillcrest, @slo, @ferry_plaza, @greenmarket])
     end
   end
 
