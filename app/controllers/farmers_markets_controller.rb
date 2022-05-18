@@ -1,7 +1,11 @@
 class FarmersMarketsController < ApplicationController
 
   def index
-    @farmers_markets = FarmersMarket.ordered_by_creation
+    if params[:order] == "active_stands"
+      @farmers_markets = FarmersMarket.order_by_active_stands
+    else
+      @farmers_markets = FarmersMarket.ordered_by_creation
+    end
   end
 
   def show
