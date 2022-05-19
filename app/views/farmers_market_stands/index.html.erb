@@ -1,11 +1,9 @@
-<%= link_to "All Stands", "/stands" %> | <%= link_to "All Farmers Markets", "/farmers_markets" %><br><br>
-
 <% @stands.each do |stand| %>
 <div class="stand-<%=stand.id%>">
 <%= link_to stand.name, "/stands/#{stand.id}" %> <br>
-<ul> <b> Open? </b> <%= stand.open %> </ul>
-<ul> <b> Review Rating: </b> <%= stand.review_rating %>/5 </ul>
-<ul> <%= link_to "Edit", "/stands/#{stand.id}/edit" %> </ul><br>
+<p> <b> Open? </b> <%= stand.open %> </p>
+<p> <b> Review Rating: </b> <%= stand.review_rating %>/5 </p>
+<p> <%= link_to "Edit", "/stands/#{stand.id}/edit" %> </p><br>
 </div>
 <% end %> <br>
 

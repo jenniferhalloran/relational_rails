@@ -1,8 +1,6 @@
-<%= link_to "All Stands", "/stands" %> | <%= link_to "All Farmers Markets", "/farmers_markets" %>
-
 <h2><%= @stand.name %></h2>
-<ol> <b> Currently Open: </b> <%= @stand.open %></ol>
-<ol> <b> Review Rating: </b> <%= @stand.review_rating %></ol>
+<p> <b> Currently Open: </b> <%= @stand.open %></p>
+<p> <b> Review Rating: </b> <%= @stand.review_rating %></p>
 
 <%= link_to "Update #{@stand.name}", "/stands/#{@stand.id}/edit", method: :get %> ||
 <%= link_to "Delete #{@stand.name}", "/stands/#{@stand.id}", method: :delete %>

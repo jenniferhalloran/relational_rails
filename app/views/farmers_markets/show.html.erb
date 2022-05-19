@@ -1,10 +1,8 @@
-<%= link_to "All Stands", "/stands" %> | <%= link_to "All Farmers Markets", "/farmers_markets" %>
-
 <h2><%= @farmers_market.name %></h2>
-<ol> <b> City: </b> <%= @farmers_market.city %></ol>
-<ol> <b> Currently Open: </b> <%= @farmers_market.open %></ol>
-<ol> <b> Stand Capacity: </b> <%= @farmers_market.num_stands %></ol>
-<ol> <b> Current Number of Stands: </b> <%= @farmers_market.count_of_stands %>,
-<%= link_to "Current Stands", "/farmers_markets/#{@farmers_market.id}/stands" %> </ol> <br><br>
+<p> <b> City: </b> <%= @farmers_market.city %></p>
+<p> <b> Currently Open: </b> <%= @farmers_market.open %></p>
+<p> <b> Stand Capacity: </b> <%= @farmers_market.num_stands %></p>
+<p> <b> Current Number of Stands: </b> <%= @farmers_market.count_of_stands %>,
+<%= link_to "Current Stands", "/farmers_markets/#{@farmers_market.id}/stands" %> </p> <br><br>
 <%= link_to "Update #{@farmers_market.name}", "/farmers_markets/#{@farmers_market.id}/edit", method: :get %>
 <%= link_to "Delete #{@farmers_market.name}", "/farmers_markets/#{@farmers_market.id}", method: :delete %>

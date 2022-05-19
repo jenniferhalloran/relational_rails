@@ -18,7 +18,7 @@ class FarmersMarket < ApplicationRecord
   end
 
   def self.order_by_active_stands
-    FarmersMarket.left_joins(:stands).group(:id).order('COUNT(stands.id) DESC')
+    left_joins(:stands).group(:id).order('COUNT(stands.id) DESC')
     #RUBY:  all.sort_by { |market| market.count_of_stands }.reverse
     # RAW SQL: find_by_sql(
     # "SELECT * FROM farmers_markets
